@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+:root{
+  --main-White : #eeeeee;
+  --main-Blue : #0092ca;
+  --mainLDark :  #393e46;
+  --mainDark : #222831;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  background-color: var(--main-Blue);
+  padding-bottom: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.currrentWeather{
+  width: 100%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8%;
 }
-
-.App-link {
-  color: #61dafb;
+.currentLoc{
+  color: var(--main-White);
+  font-size: 32px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currentDeg{
+  color: var(--main-White);
+  font-size: 64px;
+}
+.currentP{
+  color: var(--main-White);
+  font-size: 16px;
+}
+.dayPerHour{
+  display: flex;
+  margin-left: 10%;
+  overflow-x: scroll;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  width: 80%;
+  padding: 10px;
+  border-radius: 15px;
+  justify-content:space-between;
+  background-color:rgba(57,62,70, 0.5);
+}
+.hour{
+  justify-content:space-around;
+  display: inline-block;
+  width: 150px;
+  margin: 0 1.5%;
+}
+.forcDeg{
+  text-align: center;
+  color: var(--main-White);
+}
+.backnforwButton{
+  background-color: rgba(0, 146, 202, 0.6);
+  border: 0;
+  border-radius: 10px;
+  color: var(--main-White);
+  padding: 0 15px;
+  margin: 0 5px;
+}
+.hoursDiv{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  overflow: scroll;
+}
+.hourText{
+  text-align: center;
+  color: var(--main-White);
+}
+.dayWeather{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin:15px 10%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color:rgba(57,62,70, 0.5);
+}
+.day{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border-top: 1px var(--mainLDark) solid;
+}
+.dayText{
+  color: var(--main-White);
+  align-self: center;
+  margin-right: 20px;
+}
+.dailyicon{
+  margin-right: 20px;
+}
+.propDayWeather{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-left: 10%;
+  background-color:rgba(57,62,70, 0.5);
+  border-radius: 20px;
+}
+.propherty:nth-child(2n){
+  color: var(--main-White);
+  padding: 10px;
+  margin: 20px 20px 20px 5px;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(34, 40, 49, .8);
+}
+.propherty:nth-child(n+1){
+  color: var(--main-White);
+  padding: 10px;
+  margin: 20px 5px 20px 20px;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(34, 40, 49, .8);
+}
+.fontsizeBigger{
+  font-size: 34px;
+}
+.uvBar{
+  width: 100%;
+  margin: 8px 0;
+  position: relative;
+  height: 15px;
+  border-radius: 10px;
+  background: rgb(120,228,109);
+  background: linear-gradient(90deg, rgba(120,228,109,1) 6%, rgba(245,244,72,1) 37%, rgba(186,36,51,1) 73%, rgba(174,24,221,1) 100%);
+}
+.uvValue{
+  display: inline-block;
+  background-color: var(--mainDark);
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+.navbar{
+  color: var(--main-White);
+  background-color: var(--mainLDark);
+  height: 50px;
+  font-size: 24px;
+  padding: 10px;
+}
+.footer{
+  color: var(--main-White);
+  background-color: var(--mainLDark);
+  height: 50px;
+  font-size: 24px;
+  padding: 10px;
 }
